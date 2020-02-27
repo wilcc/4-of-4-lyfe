@@ -1,13 +1,90 @@
 /******************
  * YOUR CODE HERE *
  ******************/
+const addAll = function(num){
+  let sum = 0
+  for(const number of num)
+  {sum+=number}
+  return sum
+}
+
+const countSpaces = function(string) {
+  let spaces = 0
+  let space = ' '
+  for (const letter of string){
+  if(letter === space){
+  spaces = spaces +1
+  }
+  }return spaces
+}
+
+const countTrues = function(string){
+  let trues = 0
+  for (const value of string){
+ if(value ===true)
+ trues+=1
+  }
+  return trues
+}
+const makeFriendly = function(para){
+  let result = ''
+  for (const string of para){
+    if (string !== '.')
+    {result += string}
+    else {result += '!'}
+  }return result
+}
 
 
+const cubeAll = function (array){
+  let result = []
+  for (const number of array){
+    result.push(number*number*number)
+  }return result
+}
 
+const addNoises = function(array){
+  const dogs = [
+    'Fido',
+    'Rolph',
+    'Maisie',
+  ];
 
+  const cats = [
+    'Garfield',
+    'Heathcliff',
+  ]
 
+  const dinos = [
+    'Barnie',
+    'Sharp Tooth',
+  ]
+  let newArray = []
+  let animalWithNoise = ''
+  let dogNoise = ' says "Woof!"'
+  let catNoise = ' says "Meow!"'
+  let dinoNoise = ' says "ROWR."'
+  
+  for (const animal of array ){
+    if(dogs.includes(animal)){
+      animalWithNoise = animal + dogNoise
+      newArray.push(animalWithNoise)
+      
+    }
+    else if(cats.includes(animal)){
+      animalWithNoise = animal + catNoise
+      newArray.push(animalWithNoise)
 
-
+    }
+    else if(dinos.includes(animal)){
+      animalWithNoise = animal + dinoNoise
+    newArray.push(animalWithNoise)
+    
+    }
+    
+  }return newArray
+}
+addNoises(['Fido', 'Garfield', 'Sharp Tooth'])
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *
  *********************************/
